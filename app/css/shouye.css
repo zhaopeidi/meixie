@@ -1,0 +1,220 @@
+@charset "utf-8";
+/*公共样式 start*/
+body,div,h1,p,h2,header,ul,li,dl,dt,dd,ol,nav,input,footer{ margin:0; padding:0;}
+body{ color:#000;font-family:Arial, Helvetica, sans-serif;background:#ffffff;}
+body,html{ height:100%;-webkit-touch-callout: none;-webkit-user-select:none;}
+@media screen and (max-width:479px){
+    body{font-size:10px;-webkit-text-size-adjust: none;}
+    input{font-size:10px;}
+}
+@media screen and (min-width:480px) and (max-width:639px){
+    body{font-size:15px;-webkit-text-size-adjust: none;}
+    input{font-size:15px;}
+}
+@media screen and (min-width:640px) and (max-width:719px){
+    body{font-size:20px;-webkit-text-size-adjust: none;}
+    input{font-size:20px;}
+}
+@media screen and (min-width:720px){
+    body{font-size:22px;-webkit-text-size-adjust: none;}
+    input{font-size:22px;}
+}
+h1,h2,h3,h4,h5,h6{ margin:0; padding:0;font-size:100%; font-weight:normal;}
+ul,li{ list-style:none;}
+html{-webkit-text-size-adjust:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+img{border:none;  vertical-align:middle; width:100%;}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both;}
+.clearfix{ *zoom:1;}
+input{ font-family:Arial, Helvetica, sans-serif;}
+a{ text-decoration:none; color:#fff;}
+a:hover{ text-decoration:none;color:#fff;}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both;}
+.clearfix{ *zoom:1;}
+
+
+
+
+#head{
+    width:100%;
+	background:#e7416e;
+    height:3.5em;
+    overflow: hidden;
+	}
+#head li:nth-child(1){
+    padding-top:0.3em;
+	font-size:1.7em;
+	margin:0px;
+	color:#ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#head li:nth-child(2){
+    color:#ffffff;
+    text-align: center;
+    font-size: 0.8em;
+
+}
+
+#form input{
+	width:95%;
+	height:2em;
+	margin-top:1%;
+	margin-bottom:1%;
+	margin-left:2%;
+	margin-right:2%;
+	border: #999 solid 1px;
+	border-radius: 1em;
+	text-indent:1em;
+    color:#c8c7c7;
+	}
+
+#banner img{
+	width:100%;
+
+    margin-bottom:0px;
+    -webkit-box-flex:25;
+	}
+#cont{
+	display: -webkit-box;
+    margin-top:2%;
+
+	}
+#box{
+
+}
+#wrapper{
+     position: absolute;
+    top:6.2em;
+    bottom:0em;
+    width: 100%;
+}
+#left-sidebar{
+	width:30%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+}
+#left-sidebar li{
+	list-style: none;
+	 position: relative;
+}
+#left-sidebar li img{
+	width:100%;
+	margin-bottom:2%;
+}
+#left-sidebar li span{
+	position: absolute;
+	display: block;
+	bottom: 2%;
+	width:100%;
+	height:2.5em;
+	background: rgba(0, 0, 0, 0.8);
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 1em;
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
+
+#container{
+	width:30%;
+	margin-right:2.5%;
+}
+#container li{
+	list-style: none;
+	 position: relative;
+
+}
+#container li img{
+	width:100%;
+	margin-bottom:2%;
+
+}
+#container li span{
+	position: absolute;
+	display: block;
+	bottom: 2%;
+	width:100%;
+	height: 2.5em;
+	background: rgba(0, 0, 0, 0.8);
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 1em;
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+
+}
+
+#right-sidebar{
+	width:30%;
+}
+
+#right-sidebar li{
+	list-style: none;
+	position: relative;
+}
+#right-sidebar li img{
+	width:100%;
+	margin-bottom:2%;
+
+}
+#right-sidebar li span{
+	position: absolute;
+	display: block;
+	bottom: 2%;
+	width:100%;
+	height: 2.5em;
+	background: rgba(0, 0, 0, 0.8);
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 1em;
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
+footer {
+  position: absolute;
+   width: 100%;
+  height:4em;
+  bottom: 0;
+  left: 0;
+  background:black;
+  opacity:0.8;
+}
+footer ul {
+    hheight:3.5em;
+    display:-webkit-box;
+}
+footer ul li {
+  padding-top:2.2em;
+   width: 15%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-left: 5%;
+}
+footer ul li:nth-child(1){
+	background:url(../images/shouye_03.png)0.3em 0.5em no-repeat;
+	background-size:1.5em 1.5em;
+}
+footer ul li:nth-child(2){
+	background:url(../images/fenlei_03.png)0.3em 0.5em no-repeat;
+    background-size:1.5em 1.5em;
+}
+footer ul li:nth-child(3){
+	background:url(../images/faxian_09.png)0.3em 0.5em no-repeat;
+    background-size:1.5em 1.5em;
+}
+footer ul li:nth-child(4){
+	background:url(../images/wode_11.png)0.3em 0.5em no-repeat;
+    background-size:1.5em 1.5em;
+}
+footer ul li:nth-child(5){
+	background:url(../images/gengduo_13.png)0.3em 0.5em no-repeat;
+    background-size:1.5em 1.5em;
+}
+
+
+
+

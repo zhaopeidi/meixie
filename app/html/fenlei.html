@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <link href="../css/feilei.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div id="head">
+        <label>分类</label>
+    </div>
+    <div id="form">
+        <input type="text" value="请输入关键词… …" />
+    </div>
+   <div id="wrapper" >
+      <div id="cont">
+          <div id="left">
+              <ul>
+                  <li><a href="#" style="color: #e7416e;">按鞋型</a></li>
+                  <li><a href="#">按品牌</a></li>
+                  <li><a href="#">按鞋根形状</a></li>
+                  <li><a href="#">按鞋头款式</a></li>
+                  <li><a href="#">俺鞋面材质</a></li>
+                  <li><a href="#">按热门风格</a></li>
+                  <li><a href="#">流行元素</a></li>
+                  <li><a href="#">按鞋根形状</a></li>
+                  <li><a href="#">流行元素</a></li>
+              </ul>
+          </div>
+          <div id="right">
+                  <div id="cont_left">
+                      <li><img src="../images/fangshutai_03.png"/><span>防水台</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+
+                  </div>
+                  <div id="conter_zon">
+                      <li><img src="../images/fangshutai_03.png"/><span>尖头鞋</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+
+
+                  </div>
+                  <div id="cont_right">
+                      <li><img src="../images/fangshutai_03.png"/><span>平底鞋</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+                      <li><img src="../images/fangshutai_03.png"/><span>日系</span></li>
+
+                  </div>
+          </div>
+      </div>
+    </div>
+    <footer>
+        <ul>
+            <li onclick="shouye()"><a>首页</a></li>
+            <li onclick="fenlei()" style="color:#f45071;"><a>分类</a></li>
+            <li onclick="faxian()">发现</li>
+            <li onclick="wode()">我的</li>
+            <li onclick="gengduo()">更多</li>
+        </ul>
+    </footer>
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script>
+        window.onload = function () {
+            var myScroll = new iScroll('wrapper', {
+                onBeforeScrollStart: function () {
+                },
+                checkDOMChanges: true
+            });
+
+            $('#thelist li').swipe(function () {
+                $('.del').hide();
+                $('.del', this).show();
+            });
+
+            $('.del').tap(function(){
+                $(this).parent('li').remove();
+            });
+
+        }
+
+        function shouye(){
+            location.href="../shouye.html";
+        }
+        function fenlei(){
+            location.href="fenlei.html";
+        }
+        function faxian(){
+            location.href="faxian.html";
+        }
+        function wode(){
+            location.href="wode.html";
+        }
+        function gengduo(){
+            location.href="gengduo.html";
+        }
+
+
+    </script>
+
+
+</body>
+</html>

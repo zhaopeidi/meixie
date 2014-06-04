@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>首页</title>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link href="css/shouye.css" rel="stylesheet"/>
+		
+	</head>
+	<body>
+    <div id="wram">
+
+		<div id="head">
+			<li>美鞋购</li>
+           <li>meixiegou.com</li>
+
+		</div>
+		
+		<div id="form">
+				<input type="text" value="请输入关键词… …" />
+		</div>
+        <div id="wrapper">
+          <div id="box">
+            <div id="banner">
+                <img src="images/banner_02.png" />
+            </div>
+
+            <div id="cont">
+                <div id="left-sidebar">
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                </div>
+                <div id="container">
+                     <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                 </div>
+                <div id="right-sidebar">
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="images/cont1_03.png"/><span>爱的发放</span></li>
+                </div>
+            </div>
+           </div>
+
+        </div>
+        <footer>
+            <ul>
+                <li style="color:#f45071;" onclick="shouye()">首页</li>
+                <li onclick="fenlei()"><a>分类</a></li>
+                <li onclick="faxian()"><a>发现</a></li>
+                <li onclick="wode()"><a>我的</a></li>
+                <li onclick="gengduo()"><a>更多</a></li>
+            </ul>
+        </footer>
+
+
+  </div>
+	<script src="js/zepto.min.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script>
+        window.onload = function () {
+            var myScroll = new iScroll('wrapper', {
+                onBeforeScrollStart: function () {
+                },
+                checkDOMChanges: true
+            });
+
+            $('#thelist li').swipe(function () {
+                $('.del').hide();
+                $('.del', this).show();
+            });
+
+            $('.del').tap(function(){
+                $(this).parent('li').remove();
+            });
+
+        }
+        function shouye(){
+            location.href="shouye.html";
+        }
+        function fenlei(){
+               location.href="html/fenlei.html";
+        }
+        function faxian(){
+            location.href="html/faxian.html";
+        }
+        function wode(){
+            location.href="html/wode.html";
+        }
+        function gengduo(){
+            location.href="html/gengduo.html";
+        }
+
+    </script>
+	</body>
+</html>

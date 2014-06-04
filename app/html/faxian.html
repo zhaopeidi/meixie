@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>发现</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link href="../css/faxian.css" rel="stylesheet"/>
+
+</head>
+    <body>
+        <div id="head">
+            <label>发现</label>
+        </div>
+    <div id="wrapper">
+        <div id="cont">
+            <div id="popular" onclick="popular()">
+                <dl>
+                    <dt>
+                        <img src="../images/popular_03.png"/>
+                    </dt>
+                    <dd><h1>流行主题</h1></dd>
+                    <span class="getInto"></span>
+                </dl>
+            </div>
+            <div id="seckill" onclick="seckill()">
+                <dl>
+                    <dt>
+                        <img src="../images/popular_03.png"/>
+                    </dt>
+                    <dd><h1>秒杀专区</h1></dd>
+                    <span class="getInto"></span>
+                </dl>
+            </div>
+            <div id="recommend" onclick="recommend()">
+                <dl>
+                    <dt>
+                        <img src="../images/popular_03.png"/>
+                    </dt>
+                    <dd><h1>为你推荐</h1></dd>
+                    <span class="getInto"></span>
+                </dl>
+            </div>
+            <div id="shoeCabinet" onclick="shoeCabinet()">
+                <dl>
+                    <dt>
+                        <img src="../images/popular_03.png"/>
+                    </dt>
+                    <dd><h1>明星鞋柜</h1></dd>
+                    <span class="getInto"></span>
+                </dl>
+            </div>
+            <div id="footprint" onclick="footprint()">
+                <dl>
+                    <dt>
+                        <img src="../images/popular_03.png"/>
+                    </dt>
+                    <dd><h1>脚印</h1></dd>
+                    <span class="getInto"></span>
+                </dl>
+            </div>
+        </div>
+     </div>
+        <footer>
+            <ul>
+                <li onclick="shouye()"><a>首页</a></li>
+                <li onclick="fenlei()"><a>分类</a></li>
+                <li onclick="faxian()" style="color:#f45071;">发现</li>
+                <li onclick="wode()">我的</li>
+                <li onclick="gengduo()">更多</li>
+            </ul>
+        </footer>
+
+        <script src="../js/zepto.min.js"></script>
+        <script src="../js/touch.js"></script>
+        <script src="../js/iscroll.js"></script>
+        <script>
+            window.onload = function () {
+                var myScroll = new iScroll('wrapper', {
+                    onBeforeScrollStart: function () {
+                    },
+                    checkDOMChanges: true
+                });
+
+                $('#thelist li').swipe(function () {
+                    $('.del').hide();
+                    $('.del', this).show();
+                });
+
+                $('.del').tap(function(){
+                    $(this).parent('li').remove();
+                });
+
+            }
+
+            function popular(){
+                location.href="html/liuxingzhuti.html";
+            }
+            function seckill(){
+                location.href="miaoshazhuanqu.html";
+            }
+            function seckill(){
+                location.href="miaoshazhuanqu.html";
+            }
+            function recommend(){
+                location.href="html/weinituijian.html";
+            }
+            function shoeCabinet(){
+                location.href="mingxingxiegui.html";
+            }
+            function footprint(){
+                location.href="jiaoyin.html";
+            }
+
+            function shouye(){
+                location.href="../shouye.html";
+            }
+            function fenlei(){
+                location.href="fenlei.html";
+            }
+            function faxian(){
+                location.href="faxian.html";
+            }
+            function wode(){
+                location.href="wode.html";
+            }
+            function gengduo(){
+                location.href="gengduo.html";
+            }
+
+        </script>
+    </body>
+</html>

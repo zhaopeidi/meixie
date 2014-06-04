@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>脚印</title>
+    <link href="../css/jiaoyin.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="head">
+    <label>脚印</label>
+    <a id="return" href="faxian.html"></a>
+</div>
+<div id="wrapper">
+    <div id="cont">
+        <div id="left">
+            <li><img src="../images/mading_02.png"/><span>￥99.00</span></li>
+            <li><img src="../images/zhongtong_02.png"/><span>￥19.00</span></li>
+            <li><img src="../images/zhongtong_02.png"/><span>￥990.00</span></li>
+            <li><img src="../images/yuxue_05.png"/><span>￥199.00</span></li>
+            <li><img src="../images/wei_07.png"/><span>￥00.00</span></li>
+        </div>
+        <div id="conter">
+            <li><img src="../images/mading_02.png"/><span>￥11.00</span></li>
+            <li><img src="../images/yuxue_05.png"/><span>￥999.00</span></li>
+            <li><img src="../images/zhongtong_02.png"/><span>￥9989.00</span></li>
+            <li><img src="../images/wei_07.png"/><span>￥00.00</span></li>
+            <li><img src="../images/zhongtong_02.png"/><span>￥990.00</span></li>
+        </div>
+        <div id="right">
+            <li><img src="../images/zhongtong_02.png"/><span>￥990.00</span></li>
+            <li><img src="../images/yuxue_05.png"/><span>￥990.00</span></li>
+            <li><img src="../images/zhongtong_02.png"/><span>￥990.00</span></li>
+            <li><img src="../images/mading_02.png"/><span>￥990.00</span></li>
+            <li><img src="../images/wei_07.png"/><span>￥9.00</span></li>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/touch.js"></script>
+<script src="../js/iscroll.js"></script>
+<script>
+    window.onload = function () {
+        var myScroll = new iScroll('wrapper', {
+            onBeforeScrollStart: function () {
+            },
+            checkDOMChanges: true
+        });
+
+        $('#thelist li').swipe(function () {
+            $('.del').hide();
+            $('.del', this).show();
+        });
+
+        $('.del').tap(function(){
+            $(this).parent('li').remove();
+        });
+
+    }
+
+</script>
+</body>
+</html>

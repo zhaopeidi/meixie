@@ -1,0 +1,111 @@
+@charset "utf-8";
+/*公共样式 start*/
+body,div,h1,p,h2,header,ul,li,dl,dt,dd,ol,nav,input,footer{ margin:0; padding:0;}
+body{ color:#000;font-family:Arial, Helvetica, sans-serif;background:#F2F2F2;}
+body,html{ height:100%;-webkit-touch-callout: none;-webkit-user-select:none;}
+@media screen and (max-width:479px){
+    body{font-size:10px;-webkit-text-size-adjust: none;}
+    input{font-size:10px;}
+}
+@media screen and (min-width:480px) and (max-width:639px){
+    body{font-size:15px;-webkit-text-size-adjust: none;}
+    input{font-size:15px;}
+}
+@media screen and (min-width:640px) and (max-width:719px){
+    body{font-size:20px;-webkit-text-size-adjust: none;}
+    input{font-size:20px;}
+}
+@media screen and (min-width:720px){
+    body{font-size:22px;-webkit-text-size-adjust: none;}
+    input{font-size:22px;}
+}
+h1,h2,h3,h4,h5,h6{ margin:0; padding:0;font-size:100%; font-weight:normal;}
+ul,li{ list-style:none;}
+html{-webkit-text-size-adjust:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+img{border:none;  vertical-align:middle; width:100%;}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both;}
+.clearfix{ *zoom:1;}
+input{ font-family:Arial, Helvetica, sans-serif;}
+a{ text-decoration:none; color:#fff;}
+a:hover{ text-decoration:none;color:#fff;}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both;}
+.clearfix{ *zoom:1;}
+
+
+html,body{
+    overflow: hidden;
+    height:100%;
+    height:100%;
+    background:#F2F2F2;
+
+}
+
+#head{
+    width:100%;
+    background:#e7416e;
+    height:4em;
+    display:-webkit-box;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+}
+#head label{
+    font-size:2em;
+    margin:0px;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+#return {
+    background: url(../images/bg_03.png) no-repeat 1.2em center #e7416e;
+    background-size: 1em 1.5em;
+}
+#return {
+    position: absolute;
+    left: 0em;
+    top: 0em;
+    display: block;
+    width: 2.0em;
+    height: 3.5em;
+}
+
+#wenben{
+    width: 94%;
+    margin-left: 2%;
+    margin-top: 2em;
+}
+#contactInformation{
+    width: 100%;
+    height: 2em;
+   font-size: 1.5em;
+    color: #9C9C9C;
+   font-weight: bold;
+
+}
+#wnzi{
+    width: 94%;
+    margin-left: 2%;
+    margin-top: 2em;
+}
+#say{
+    width: 100%;
+    height: 10em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #9C9C9C;
+}
+
+.registration{
+    width:96%;
+    margin-left: 2%;
+    height: 2.5em;
+}
+#stration{
+    width:100%;
+    height:2em;
+    background: #F7941C;
+    border: none;
+    margin-top:4%;
+    color: #ffffff;
+    font-size:1.5em;
+}

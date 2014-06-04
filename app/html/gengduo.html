@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>更多</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link href="../css/gengduo.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+<div id="wram">
+
+    <div id="head">
+        <label>更多</label>
+        <a id="return" href="../shouye.html"></a>
+    </div>
+
+    <div id="wrapper">
+        <div id="scroller">
+            <li style="height: 0.6em; border: none;"></li>
+            <ul id="k">
+                <li> <a href="shezhi.html">修改个人资料</a><span></span></li>
+                <li><a href="guanyu.html">修改密码</a><span></span></li>
+            </ul>
+            <li style="height: 0.6em; border: none;"></li>
+            <ul id="k1">
+                <li> <a href="">使用帮助</a><span></span></li>
+                <li><a href="">意见反馈</a><span></span></li>
+                <li><a href="">设置</a><span></span></li>
+                <li><a href="">摇一摇</a><span></span></li>
+                <li><a href="">关于我们</a><span></span></li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/touch.js"></script>
+<script src="../js/iscroll.js"></script>
+<script>
+    window.onload = function () {
+        var myScroll = new iScroll('wrapper', {
+            onBeforeScrollStart: function () {
+            },
+            checkDOMChanges: true
+        });
+
+        $('#thelist li').swipe(function () {
+            $('.del').hide();
+            $('.del', this).show();
+        });
+
+        $('.del').tap(function(){
+            $(this).parent('li').remove();
+        });
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <link href="../css/sousuo.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="head">
+        <a id="return" href="../shouye.html" class="active"></a>
+        <label>搜索</label>
+
+     </div>
+    <div id="form">
+        <input type="text" value="请输入关键词… …" />
+    </div>
+    <div id="wrapper">
+       <div id="cont">
+            <div id="left">
+                <li><img src="../images/rixi_02.png"/><span>日系</span></li>
+                <li><img src="../images/oumei_02.png"/><span>欧美</span></li>
+                <li><img src="../images/pingdi_02.png"/><span>平底</span></li>
+                <li><img src="../images/rixi_02.png"/><span>日系</span></li>
+            </div>
+            <div id="conter">
+                <li><img src="../images/rixi_02.png"/><span>日系</span></li>
+                <li><img src="../images/oumei_02.png"/><span>欧美</span></li>
+                <li><img src="../images/pingdi_02.png"/><span>平底</span></li>
+                <li><img src="../images/rixi_02.png"/><span>日系</span></li>
+            </div>
+            <div id="right">
+                <li><img src="../images/rixi_02.png"/><span>日系</span></li>
+                <li><img src="../images/oumei_02.png"/><span>欧美</span></li>
+                <li><img src="../images/pingdi_02.png"/><span>平底</span></li>
+                <li><img src="../images/rixi_02.png"/><span>日系</span></li>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script>
+        window.onload = function () {
+            var myScroll = new iScroll('wrapper', {
+                onBeforeScrollStart: function () {
+                },
+                checkDOMChanges: true
+            });
+
+            $('#thelist li').swipe(function () {
+                $('.del').hide();
+                $('.del', this).show();
+            });
+
+            $('.del').tap(function(){
+                $(this).parent('li').remove();
+            });
+
+        }
+
+    </script>
+</body>
+</html>

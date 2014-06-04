@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link href="../css/zhuce.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+<div id="wram">
+
+    <div id="head">
+        <label>注册</label>
+        <a id="return" onclick="tiaozhuan()"></a>
+    </div>
+
+    <div class="from">
+        <label>邮 箱：</label><input type="text" value="请输入你常用的邮箱地址" />
+    </div>
+    <div class="from">
+        <label>昵 称：</label><input type="text" value="取一个美鞋购的名称吧" />
+    </div>
+    <div class="from">
+        <label>密 码：</label><input type="text" value="输入密码" />
+    </div>
+    <div id="fromradio">
+        <label id="label">性 别：</label><input type="radio" name="xingbie" value="女" /><label id="nv">女</label>
+        <input type="radio" name="xingbie" value="男" /><label id="nan">男</label>
+    </div>
+    <div class="registration">
+        <input type="button" id="stration" value="注册"/>
+    </div>
+
+</div>
+
+    <script>
+        function tiaozhuan(){
+            location.href="../html/denglu.html";
+        }
+    </script>
+</body>
+</html>

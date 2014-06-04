@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>靴子</title>
+    <link href="../css/xuezi.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="head">
+    <label>靴子</label>
+    <a id="return" href="sousuo.html"></a>
+</div>
+<div id="form">
+    <input type="text" id="text" value="请输入关键词… …"/>
+</div>
+<div id="wrapper">
+    <div id="cont">
+
+        <div id="left">
+            <li><img src="../images/mading_02.png"/><span>马丁鞋</span></li>
+            <li><img src="../images/zhongtong_02.png"/><span>中筒靴</span></li>
+            <li><img src="../images/yuxue_05.png"/><span>雨靴</span></li>
+            <li><img src="../images/wei_07.png"/><span>？？？</span></li>
+        </div>
+        <div id="conter">
+            <li><img src="../images/mading_02.png"/><span>短筒</span></li>
+            <li><img src="../images/yuxue_05.png"/><span>长筒靴</span></li>
+            <li><img src="../images/zhongtong_02.png"/><span>坡跟靴</span></li>
+            <li><img src="../images/wei_07.png"/><span>？？</span></li>
+        </div>
+        <div id="right">
+            <li><img src="../images/zhongtong_02.png"/><span>柳丁靴</span></li>
+            <li><img src="../images/yuxue_05.png"/><span>流苏靴</span></li>
+            <li><img src="../images/mading_02.png"/><span>雪地靴</span></li>
+            <li><img src="../images/wei_07.png"/><span>？？</span></li>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/touch.js"></script>
+<script src="../js/iscroll.js"></script>
+<script>
+    window.onload = function () {
+        var myScroll = new iScroll('wrapper', {
+            onBeforeScrollStart: function () {
+            },
+            checkDOMChanges: true
+        });
+
+        $('#thelist li').swipe(function () {
+            $('.del').hide();
+            $('.del', this).show();
+        });
+
+        $('.del').tap(function(){
+            $(this).parent('li').remove();
+        });
+
+    }
+
+</script>
+</body>
+</html>

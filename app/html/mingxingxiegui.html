@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link href="../css/mingxingxiegui.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+<div id="wram">
+
+    <div id="head">
+        <label>明星鞋柜</label>
+        <a id="return" href="faxian.html"></a>
+    </div>
+
+    <div id="wrapper">
+        <div id="box">
+            <div id="banner">
+                <img src="../images/mingxingbanner_02.png" />
+            </div>
+
+            <div id="cont">
+                <div id="left-sidebar">
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                </div>
+                <div id="container">
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                </div>
+                <div id="right-sidebar">
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                    <li><img src="../images/cont1_03.png"/><span>爱的发放</span></li>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/touch.js"></script>
+<script src="../js/iscroll.js"></script>
+<script>
+    window.onload = function () {
+        var myScroll = new iScroll('wrapper', {
+            onBeforeScrollStart: function () {
+            },
+            checkDOMChanges: true
+        });
+
+        $('#thelist li').swipe(function () {
+            $('.del').hide();
+            $('.del', this).show();
+        });
+
+        $('.del').tap(function(){
+            $(this).parent('li').remove();
+        });
+
+    }
+
+</script>
+</body>
+</html>
